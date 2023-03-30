@@ -1,0 +1,108 @@
+<!--
+ * @Author: 陈诗文
+ * @Date: 2019-12-23 11:17:07
+ * @LastEditTime: 2021-08-26 10:25:30
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \audio-vision-platform\public\index.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="icon" href="<%= BASE_URL %>icon.ico" />
+  <meta name="apple-mobile-web-app-capable" content="YES">
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0, viewport-fit=cover. user-scalable=0" />
+  <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" /> -->
+  <title>
+    <%= VUE_APP_NAME %>
+      <%= VUE_APP_VERSION %>
+  </title>
+</head>
+
+<body>
+  <noscript>
+    <strong>We"re sorry but ldp-component-platform doesn"t work properly without
+      JavaScript enabled. Please enable it to continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <button id="test2" style="position:absolute; font-size: 25px; background-color: white; top:100px; left:0; z-index:100;">全屏</button>
+  <video id="myvideo" src=""></video>
+  <button id="test" style="position:absolute; font-size: 25px; background-color: white; top:0; left:0; z-index:100;">全屏</button>
+  <button id="test1" style="position:absolute; font-size: 25px; background-color: white; top:50px; left:0; z-index:100;">非全屏</button>
+  <!-- built files will be auto injected -->
+</body>
+<script>
+  function getBrowserInfo() {
+    var agent = navigator.userAgent.toLowerCase();
+
+    var regStr_ie = /msie [\d.]+;/gi;
+    var regStr_ff = /firefox\/[\d.]+/gi
+    var regStr_chrome = /chrome\/[\d.]+/gi;
+    var regStr_saf = /safari\/[\d.]+/gi;
+    //IE
+    if (agent.indexOf("msie") > 0) {
+      return agent.match(regStr_ie);
+    }
+
+    //firefox
+    if (agent.indexOf("firefox") > 0) {
+      return agent.match(regStr_ff);
+    }
+
+    //Safari
+    if (agent.indexOf("safari") > 0 && agent.indexOf("chrome") < 0) {
+      return agent.match(regStr_saf);
+    }
+
+    //Chrome
+    if (agent.indexOf("chrome") > 0) {
+      return agent.match(regStr_chrome);
+    }
+
+  }
+  var browser = getBrowserInfo();
+  //alert(browser); 
+  var verinfo = (browser + "");
+  document.querySelector("#test2").innerHTML = verinfo
+</script>
+<script>
+  /* Get the documentElement (<html>) to display the page in fullscreen */
+  var elem = document.documentElement;
+  
+  /* View in fullscreen */
+  function openFullscreen() {
+    let aa = document.querySelector("#test");
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+      aa.innerHTML = "requestFullscreen";
+    } else if (elem.webkitRequestFullscreen) { /* Safari */
+      elem.webkitRequestFullscreen();
+      aa.innerHTML = "webkitRequestFullscreen";
+    } else if (elem.msRequestFullscreen) { /* IE11 */
+      elem.msRequestFullscreen();
+      aa.innerHTML = "msRequestFullscreen";
+    }else{
+      aa.innerHTML = "aaaaaaa";
+    }
+  }
+  
+  /* Close fullscreen */
+  function closeFullscreen() {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) { /* Safari */
+      document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) { /* IE11 */
+      document.msExitFullscreen();
+    }
+  }
+
+  document.querySelector("#test").addEventListener("click", openFullscreen)
+  document.querySelector("#test1").addEventListener("click", closeFullscreen)
+  </script>
+
+</html>

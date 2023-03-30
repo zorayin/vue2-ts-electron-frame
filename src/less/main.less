@@ -1,0 +1,809 @@
+@import "./reset.less";
+@import "../components/common/vuetree/sl-vue-tree-light.css";
+@import "../themes/index.css";
+@import "../themes/basic.css";
+
+html,
+body {
+  // -moz-user-select: none;
+  // -webkit-user-select: none;
+  // -ms-user-select: none;
+  // -khtml-user-select: none;
+  // user-select: none;
+  width: 100%;
+  height: 100%;
+}
+
+// 清除safari浏览器默认的点击效果
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+//不支持选中
+.not-supported-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+  -khtml-user-select: none; /* Konqueror */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+  // not supported by any browser */
+}
+
+.custom-tree-select {
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+
+  .vue-treeselect__control {
+    height: 100%;
+
+    .vue-treeselect__value-container {
+      font-size: 0;
+
+      .vue-treeselect__single-value {
+        font-size: 13px;
+        line-height: normal;
+        height: 15px;
+        margin: auto;
+        bottom: 2px;
+        position: absolute;
+        top: 0;
+      }
+
+      .vue-treeselect__placeholder {
+        font-size: 13px;
+        line-height: normal;
+        height: 15px;
+        margin: auto;
+        bottom: 2px;
+      }
+    }
+  }
+
+  .vue-treeselect__option {
+    padding: 0.8rem 0;
+  }
+
+  .vue-treeselect__menu {
+    display: block !important;
+    position: fixed !important;
+    z-index: 99999 !important;
+    top: 200px !important;
+  }
+}
+
+input,
+textarea {
+  box-sizing: border-box;
+  color: white !important;
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+}
+
+// 强制修改elementui 组件样式，配合主题颜色
+.el-slider {
+  .el-slider__button {
+    background: #fff !important;
+  }
+}
+
+.el-checkbox {
+  .el-checkbox__inner {
+    &::after {
+      border-color: white !important;
+    }
+  }
+}
+
+.el-switch {
+  .el-switch__core {
+    &::after {
+      background: white !important;
+    }
+  }
+}
+
+.el-message-box__message {
+  p {
+    color: #dbe4ff !important;
+  }
+}
+
+.el-message-box__btns {
+  .el-button--primary {
+    span {
+      color: white !important;
+    }
+  }
+}
+
+// ----------------------------------------------
+.chart-style-scroll-bar .resource-manage-bar-wrapper {
+  background: #1b1e21 !important;
+  border-color: #4a515c !important;
+}
+.custom-style-view-attr-config {
+  .sub-info-bar {
+    padding: 0 !important;
+    padding-bottom: 12px !important;
+
+    &:last-child {
+      padding-bottom: 0px !important;
+    }
+
+    .line {
+      display: none;
+    }
+  }
+}
+
+//number-input
+.custom-num-input-row {
+  width: 100% !important;
+  line-height: 100% !important;
+  height: 100% !important;
+
+  .el-input-number__decrease {
+    height: 94%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    top: 0;
+    margin: 1px 0 0 0;
+  }
+
+  .el-input-number__increase {
+    height: 94%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    top: 0;
+    margin: 1px 0 0 0;
+  }
+
+  .el-input__inner {
+    height: 100% !important;
+    line-height: 100% !important;
+  }
+
+  .el-input {
+    height: 100%;
+  }
+}
+
+.custom-input {
+  height: 100%;
+
+  .el-input__inner {
+    line-height: normal;
+    padding: 0 6px;
+    height: 100% !important;
+  }
+
+  .el-input__prefix {
+    left: 5px !important;
+  }
+}
+
+.custom-num-input {
+  height: 100%;
+  width: 100% !important;
+  line-height: normal !important;
+
+  .el-input-number__decrease,
+  .el-input-number__increase {
+    width: 30px;
+    height: 58% !important;
+    transform: scale(0.9) !important;
+    font-size: 0;
+    line-height: normal !important;
+    background: transparent;
+    border: none !important;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+  }
+
+  .el-input-number__decrease {
+    right: 0;
+    bottom: 0;
+  }
+
+  .el-input-number__increase {
+    top: 0;
+    right: 0;
+  }
+
+  .el-icon-arrow-down {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 18px;
+
+    &::before {
+      content: "\e790";
+      position: absolute;
+      left: 2px;
+      right: 0;
+      top: -2px;
+    }
+  }
+
+  .el-icon-arrow-up {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 18px;
+
+    &::before {
+      content: "\e78f";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  .el-input {
+    height: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .el-input__inner {
+      height: 100% !important;
+      padding-left: 10px !important;
+      padding-right: 30px !important;
+    }
+  }
+}
+
+.custom-prefix-input {
+  .el-input__inner {
+    padding: 0 30px !important;
+  }
+
+  .el-input__prefix {
+    display: inline-block;
+    width: 30px !important;
+    right: auto !important;
+    left: 0 !important;
+  }
+}
+
+.custom-textarea {
+  height: 100%;
+
+  .el-textarea__inner {
+    padding: 5px 7px !important;
+    height: 100%;
+    line-height: 1.1;
+  }
+}
+
+.custom-select {
+  width: 100%;
+  height: 100%;
+
+  .el-input--suffix {
+    height: 100%;
+
+    .el-input__inner {
+      padding: 0 6px;
+      height: 100%;
+      min-height: 30px;
+      line-height: normal;
+    }
+
+    .el-icon-arrow-up {
+      line-height: normal;
+    }
+  }
+}
+
+//配置的下拉框图标样式
+// .sub-info-bar {
+//   .info-container {
+//     .el-select {
+//       .el-input--suffix {
+//         .el-input__suffix {
+//           right: 0 !important;
+//           background: rgba(53, 58, 61, 1);
+//           border: 1px solid #7b7b7b;
+//           border-radius: 0px 3px 3px 0px;
+//           width: 40px;
+//           height: calc(100% - 2px);
+//         }
+//       }
+//     }
+//   }
+// }
+.custom-time-picker {
+  width: 100% !important;
+  height: 100%;
+
+  .el-input__inner {
+    padding-right: 8px !important;
+    line-height: normal;
+    height: 100%;
+  }
+
+  .el-input__prefix {
+    .el-icon-time {
+      line-height: normal;
+    }
+  }
+
+  .el-input__suffix {
+    .el-input__icon {
+      line-height: normal;
+    }
+  }
+}
+
+.custom-time-range-picker {
+  width: 100% !important;
+  height: 100% !important;
+
+  .el-range__icon {
+    line-height: normal !important;
+  }
+
+  .el-range-input {
+    line-height: normal;
+    height: 100%;
+  }
+
+  .el-range-separator {
+    height: auto !important;
+    line-height: normal;
+  }
+
+  .el-range__close-icon {
+    line-height: normal !important;
+  }
+}
+
+.custom-date-picker {
+  width: 100% !important;
+  height: 100% !important;
+
+  .el-input__inner {
+    line-height: normal;
+    height: 100%;
+    padding-right: 8px !important;
+  }
+
+  .el-input__prefix {
+    .el-input__icon {
+      line-height: normal;
+    }
+  }
+
+  .el-input__suffix {
+    .el-input__icon {
+      line-height: normal;
+    }
+  }
+}
+
+.custom-date-range-picker {
+  .el-icon-date {
+    line-height: 25px !important;
+    height: 25px;
+  }
+
+  .el-range-separator {
+    line-height: normal !important;
+  }
+}
+
+.custom-slider {
+  width: 100% !important;
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  .el-slider__runway {
+    margin: 0 0;
+  }
+}
+
+.custom-chart {
+  left: 0 !important;
+  top: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+
+  .orgchart {
+    min-width: auto !important;
+    min-height: auto !important;
+    width: 100%;
+    height: 100%;
+  }
+
+  .node {
+    width: 120px !important;
+    padding: 0px !important;
+  }
+
+  .title {
+    line-height: normal;
+    border-radius: 2px !important;
+    background-color: #84c4ff !important; // padding: 0.73rem 1.5rem;
+    // padding: 6px 14px;
+    padding: 6px 0;
+    height: auto !important;
+  }
+
+  .lines {
+    td {
+      border-color: #8acdfc !important; // border-width: 1px !important;
+    }
+
+    .downLine {
+      background-color: #8acdfc !important; // width: 1px !important;
+    }
+  }
+}
+
+.custom-tree-select {
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+
+  .vue-treeselect__single-value {
+    color: #fff !important;
+  }
+
+  .vue-treeselect__control {
+    height: 100%;
+    background: none !important;
+    border: none !important;
+
+    .vue-treeselect__value-container {
+      font-size: 0;
+
+      .vue-treeselect__single-value {
+        font-size: 13px;
+        line-height: normal;
+        height: 15px;
+        margin: auto;
+        bottom: 2px;
+        position: absolute;
+        top: 0;
+      }
+
+      .vue-treeselect__placeholder {
+        font-size: 13px;
+        line-height: normal;
+        height: 15px;
+        margin: auto;
+        bottom: 2px;
+      }
+    }
+  }
+
+  .vue-treeselect__menu {
+    background: #2657b0 !important;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    border: 1px solid #5879ee;
+    border-top: none !important;
+    z-index: 99999 !important;
+  }
+
+  .vue-treeselect__x-container {
+    color: #fff;
+
+    &:hover {
+      color: #75a6ff !important;
+    }
+  }
+
+  .vue-treeselect__control-arrow-container {
+    .vue-treeselect__control-arrow {
+      color: #fff;
+    }
+
+    &:hover {
+      .vue-treeselect__control-arrow {
+        color: #75a6ff !important;
+      }
+    }
+  }
+
+  .vue-treeselect__list-item {
+    color: white;
+
+    div {
+      background: transparent;
+    }
+  }
+
+  .vue-treeselect__option-arrow-container {
+    .vue-treeselect__option-arrow {
+      color: #fff;
+    }
+
+    &:hover {
+      .vue-treeselect__option-arrow {
+        color: #75a6ff !important;
+      }
+    }
+  }
+
+  .vue-treeselect__option--selected {
+    background-color: transparent !important;
+    color: #75a6ff;
+  }
+}
+
+.custom-el-tree {
+  .el-tree-node.is-current > .el-tree-node__content {
+    background-color: #eaf5ff !important;
+
+    .el-tree-node__label {
+      color: #71b6f7;
+    }
+  }
+}
+
+.custom-el-scroll {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  .el-scrollbar__wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-sizing: content-box;
+    padding-bottom: 17px;
+    padding-right: 17px;
+    overflow: auto !important;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+}
+
+.h-el-scroll {
+  width: 100%;
+  height: 100%;
+  .el-scrollbar__wrap {
+    overflow-x: auto !important;
+  }
+}
+
+.custom-fill-el-scroll {
+  padding-right: 17px;
+  box-sizing: border-box;
+
+  .el-scrollbar__wrap {
+    overflow: auto;
+  }
+}
+
+.custom-el-radio {
+  margin-right: 24px;
+  margin-top: 3px;
+
+  .el-radio__label {
+    padding-left: 6px;
+  }
+}
+
+.custom-el-check {
+  margin-right: 20px !important;
+  margin-top: 3px;
+
+  .el-checkbox__input {
+    .el-checkbox__inner {
+      background: transparent;
+    }
+  }
+
+  .el-checkbox__label {
+    padding-left: 6px;
+  }
+}
+
+.custom-color-picker {
+  position: relative;
+  width: 100%;
+  height: 100% !important;
+
+  .el-color-picker__trigger {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+
+    .el-color-picker__color {
+      width: 10% !important;
+    }
+
+    .el-icon-arrow-down {
+      width: 10%;
+      left: auto;
+      right: 0;
+      color: rgba(255, 255, 255, 0.6);
+
+      &::before {
+        content: "\E790";
+      }
+    }
+  }
+}
+
+.custom-gradient-color-picker {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.scroll-container-y {
+  // 垂直滚动条
+  position: relative;
+  flex: 1;
+  width: 100%;
+  overflow: auto;
+  &::-webkit-scrollbar-track {
+    // background-color: #f5f5f5;
+    background-color: transparent;
+    border-radius: 6px;
+  }
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    // background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+  }
+}
+.scroll-container-x {
+  //水平滚动条
+  position: relative;
+  flex: 1;
+  width: 100%;
+  overflow: auto;
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 6px;
+  }
+  &::-webkit-scrollbar {
+    height: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+  }
+}
+
+// html,
+// body {
+//   touch-action: none;
+// }
+
+.el-color-dropdown__value,
+.carousel-page-controller-wrapper {
+  .el-input--mini {
+    input {
+      color: #ffffff !important;
+    }
+  }
+}
+//颜色选择器自定义布局
+.row-info-container {
+  .color-picker-box {
+    .el-color-picker {
+      position: relative;
+      width: 17% !important;
+      height: 100%;
+      .el-color-picker__trigger {
+        width: 100% !important;
+        height: 100% !important;
+        box-sizing: border-box;
+        padding: 0 !important;
+        border: none !important;
+        .el-color-picker__color {
+          width: 100% !important;
+        }
+        .el-icon-arrow-down {
+          width: 10%;
+          left: auto;
+          right: 52%;
+          color: rgba(255, 255, 255, 0.6);
+
+          &::before {
+            content: "\E790";
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  html {
+    font-size: 4px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  html {
+    font-size: 4.8px;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  html {
+    font-size: 7.2px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  html {
+    font-size: 9.6px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  html {
+    font-size: 10.8px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  html {
+    font-size: 14.4px;
+  }
+}
+
+@media screen and (min-width: 1720px) {
+  html {
+    font-size: 17.2px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  html {
+    font-size: 19.2px;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  html {
+    font-size: 25.6px;
+  }
+}
+
+@media screen and (min-width: 2638px) {
+  html {
+    font-size: 26.38px;
+  }
+}
+
+@media screen and (min-width: 2736px) {
+  html {
+    font-size: 27.36px;
+  }
+}

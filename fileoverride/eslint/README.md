@@ -1,0 +1,1 @@
+覆盖路径  node_modules\eslint\lib\rules\no-shadow.js

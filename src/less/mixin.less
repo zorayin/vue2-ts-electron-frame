@@ -1,0 +1,59 @@
+.pxtorem1920(@value) {
+  @result: (@value/19.2rem);
+}
+
+.backgroundImage(@url, @xSize: 100%, @ySize: 100%) {
+  background-size: @xSize @ySize;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(@url);
+}
+
+.noNextLine {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.inputPlaceHolder(@color : transparent, @fontSize: 12px) {
+  &::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: @color;
+    font-size: @fontSize;
+  }
+
+  &:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: @color;
+    font-size: @fontSize;
+  }
+
+  &::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: @color;
+    font-size: @fontSize;
+  }
+
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: @color;
+    font-size: @fontSize;
+  }
+}
+
+.webkitScroll(@width: 6px, @height: auto, @trackColor: #f5f5f5, @thumbColor: #cfcfcf, ) {
+  &::-webkit-scrollbar-track {
+    background-color: @trackColor;
+    border-radius: 6px;
+  }
+
+  &::-webkit-scrollbar {
+    width: @width;
+    height: @height;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: @thumbColor;
+    border-radius: 6px;
+  }
+}

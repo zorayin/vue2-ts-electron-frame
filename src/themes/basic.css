@@ -1,0 +1,301 @@
+/* vs code é€šè¿‡æ‰©å±•å·¥å…·å°†basic.lessè‡ªåŠ¨ç”Ÿæˆæœ€æ–°ç›¸åº”cssæ–‡ä»¶ï¼Œå¤–éƒ¨é¡¹ç›®è¯·æ‹·è´ä½¿ç”¨basic.cssæ–‡ä»¶ */
+.input-unit-bar .number-input {
+  background: #31353d !important;
+}
+.input-unit-bar .drop-down {
+  background-color: #4a515c;
+}
+.text-style-adaptation textarea {
+  color: white !important;
+  background: #1d1f25 !important;
+  border: 1px solid #49505c !important;
+}
+.text-style-adaptation .el-dropdown {
+  border: 1px solid #49505c !important;
+  background-color: #1d1f25;
+  color: #ffffff;
+}
+.text-style-adaptation .el-dropdown .el-icon--right {
+  color: #a4aab3;
+}
+.text-style-adaptation .fontSize input {
+  color: white !important;
+  background: #1d1f25 !important;
+  border: 1px solid #49505c !important;
+}
+.text-style-adaptation .fontSize .el-input-number__decrease,
+.text-style-adaptation .fontSize .el-input-number__increase {
+  border-left: 1px solid #49505c !important;
+}
+.text-style-adaptation .four-line .seletion {
+  background-color: #1d1f25;
+  border: 1px solid #49505c;
+}
+.text-style-adaptation .five-line .seletion {
+  background-color: #1d1f25;
+  border: 1px solid #49505c;
+}
+.text-style-adaptation .six-line .el-input-number__decrease,
+.text-style-adaptation .six-line .el-input-number__increase {
+  border-left: 1px solid #4a515c !important;
+}
+.text-style-adaptation .six-line input {
+  color: white !important;
+  background: #1d1f25 !important;
+  border: 1px solid #49505c !important;
+}
+.color-picker-box {
+  background: #1b1e21;
+  border: 1px solid #4a515c;
+}
+.style-theme-colors .fill-selection {
+  border: 1px solid #4a515c;
+}
+.style-theme-colors .pure-view-right .el-input-number__decrease {
+  background: #24272c !important;
+  border-right: 1px solid #363b42 !important;
+}
+.style-theme-colors .pure-view-right .el-input-number__increase {
+  background: #24272c !important;
+  border-left: 1px solid #363b42 !important;
+}
+.style-theme-colors .pure-view-right .el-icon-minus,
+.style-theme-colors .pure-view-right .el-icon-plus {
+  color: #eeeeee;
+}
+.style-theme-colors .pure-view-right input {
+  border: 1px solid #363b42 !important;
+  background: #1b1d21 !important;
+  color: #eeeeee !important;
+}
+.style-shadow {
+  color: #ffffff;
+}
+.style-shadow input,
+.style-shadow textarea {
+  color: white !important;
+  background: #1d1f25 !important;
+  border: 1px solid #49505c !important;
+}
+.style-shadow .custom-num-input .el-input-number__decrease,
+.style-shadow .custom-num-input .el-input-number__increase {
+  border-left: 1px solid #4a515c !important;
+}
+.style-shadow .line-left-3 .el-input-number__decrease,
+.style-shadow .line-left-4 .el-input-number__decrease {
+  background: #24272c !important;
+  border-right: 1px solid #363b42 !important;
+}
+.style-shadow .line-left-3 .el-input-number__increase,
+.style-shadow .line-left-4 .el-input-number__increase {
+  background: #24272c !important;
+  border-left: 1px solid #363b42 !important;
+}
+.style-shadow .line-left-3 .el-icon-minus,
+.style-shadow .line-left-4 .el-icon-minus,
+.style-shadow .line-left-3 .el-icon-plus,
+.style-shadow .line-left-4 .el-icon-plus {
+  color: #eeeeee;
+}
+.style-round-corner input,
+.style-round-corner textarea {
+  box-sizing: border-box;
+  color: #ffffff !important;
+  background: #1b1d21 !important;
+  border: 1px solid #4a515c !important;
+}
+.styleBorder-content {
+  color: #fff;
+}
+.styleBorder-content .el-input-number__decrease {
+  border-left: 1px solid #4a515c !important;
+  background-color: #24272c !important;
+}
+/*解决布局污染*/
+.line-item-width70 .el-input-number__decrease {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+.styleBorder-content .el-input-number__increase {
+  border-left: 1px solid #4a515c !important;
+  border-top: 1px solid #4a515c !important;
+  border-right: 1px solid #4a515c !important;
+  background-color: #24272c;
+  top: 0 !important;
+  right: 2px;
+  border-right: none !important;
+}
+.styleBorder-content input {
+  background-color: #1b1d21 !important;
+  border: 1px solid #4a515c !important;
+  color: #ffffff !important;
+}
+.styleBorder-content .input-unit {
+  background-color: #1b1d21;
+  color: #ffffff;
+}
+.styleBorder-content .line-item-width70-color {
+  background: #1b1d21;
+  border: 1px solid #4a515c;
+}
+.styleBorder-content .el-checkbox {
+  color: #fff;
+}
+.color-code-input {
+  color: #fff;
+}
+.xy-axis-index {
+  color: #fff;
+}
+.room-controller-wrapper {
+  color: #fff;
+}
+.center-circle-input-wrapper {
+  color: #fff;
+}
+.center-circle-input-wrapper .el-switch__label {
+  color: #fff;
+}
+.chart-series-input {
+  color: #fff;
+}
+.chart-series-input .el-switch__label {
+  color: #fff;
+}
+.col-db-num-input-wrapper .box span {
+  color: #fff;
+}
+/* æ¸å˜é¢œè‰²é€‰æ‹©å™¨ */
+.gradient-color-editor-content {
+  color: white;
+}
+.gradient-color-editor-content .color-show-view {
+  border: 1px solid #49505c;
+}
+.gradient-color-editor-content .color-selection {
+  border: 1px solid #49505c;
+}
+.gradient-color-editor-content .editor {
+  color: #fff;
+}
+/* å›¾ç‰‡èµ„æºé€‰æ‹©å™¨ */
+.resource-manage-bar-wrapper {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+.resource-manage-bar-wrapper .upload-view {
+  color: #fff;
+}
+/* è¶…é“¾æŽ¥é€‰æ‹©å™¨ */
+.hyperlink-manage-bar-wrapper {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: white;
+}
+/* è½®æ’­æŽ§ä»¶ */
+.carousel-page-controller-wrapper .radio-second {
+  color: #fff;
+}
+/* çº¿æ®µé€‰æ‹© */
+.line-type-selector {
+  border: 1px solid #4a515c;
+}
+/* å¼¹çª—è®¾ç½® */
+.add-modify-window-wrapper {
+  border: 1px solid #3e58b5;
+  background: rgba(22, 65, 142, 0.96);
+  color: #fff;
+}
+.add-modify-window-wrapper .head-bar {
+  border-bottom: 1px solid rgba(1, 197, 238, 0.6);
+}
+.add-modify-window-wrapper .btn-radio {
+  color: #fefefe;
+}
+.add-modify-window-wrapper .resource {
+  color: #fff;
+}
+.add-modify-window-wrapper .resource .tabbar-box {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.add-modify-window-wrapper .resource .tabbar-box span {
+  color: rgba(255, 255, 255, 0.6);
+}
+.add-modify-window-wrapper .resource .tabbar-box span.tab-actived {
+  color: #ffffff;
+}
+.add-modify-window-wrapper .scroll-container-li {
+  background: #2857ab;
+}
+.add-modify-window-wrapper .selection-bgcolor {
+  background: #227db6;
+}
+.style-attr-config-wrapper .attr-setting-container .var-key {
+  color: #fff;
+}
+/**
+  elementui ç»„ä»¶æ ·å¼
+*/
+.style-attr-config-wrapper input,
+.style-attr-config-wrapper textarea {
+  box-sizing: border-box;
+  color: #fff !important;
+  background: #1b1e21 !important;
+  border: 1px solid #4a525c !important;
+}
+.custom-num-input .el-icon-arrow-up {
+  color: rgba(255, 255, 255, 0.6);
+}
+.custom-num-input .el-icon-arrow-down {
+  color: rgba(255, 255, 255, 0.6);
+}
+.el-dropdown {
+  color: #ffffff !important;
+}
+.el-dropdown-menu {
+  background-color: #272b30 !important;
+  border: 1px solid #22262a !important;
+  box-shadow: 1px 2px 5px 0px rgba(107, 114, 126, 0.5) !important;
+  border-radius: 4px !important;
+}
+.el-dropdown-menu .el-dropdown-menu__item {
+  color: #ffffff;
+}
+.el-dropdown-menu .el-dropdown-menu__item:hover {
+  background-color: #2f343b !important;
+  color: #2491f7 !important;
+}
+.el-popper .popper__arrow::after {
+  border-bottom-color: #272b30 !important;
+}
+.el-color-picker__panel {
+  background-color: #272b30 !important;
+  border: 1px solid #22262a;
+  box-shadow: 1px 2px 5px 0px rgba(20, 22, 25, 0.5);
+  border-radius: 4px;
+}
+.el-color-picker__panel
+  .el-color-dropdown__btns
+  .el-color-dropdown__value
+  .el-input--mini
+  input {
+  color: #ffffff !important;
+}
+.el-color-picker__panel .el-color-dropdown__link-btn {
+  padding: 7px 15px;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+}
+.el-color-picker__panel .el-color-dropdown__link-btn:hover {
+  border: 1px solid #2491f7;
+}
+.el-color-picker__panel .el-button--text {
+  color: #e6e6e6 !important;
+}
+.el-color-picker__panel .el-button--text:hover {
+  color: #2491f7 !important;
+}
+.el-color-picker__panel .el-color-dropdown__btn {
+  background: #2491f7 !important;
+  border: 1px solid #2491f7 !important;
+  color: #ffffff;
+}

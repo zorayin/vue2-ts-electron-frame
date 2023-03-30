@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# 用git commit -m"test" -n提交可忽略检查
+npx lint-staged
